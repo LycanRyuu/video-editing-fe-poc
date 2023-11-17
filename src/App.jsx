@@ -1,26 +1,24 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import MediaItem from "./MediaItem";
-import Timeline from "./Timeline";
+import LandingPage from "./components/LandingPage";
+import Edit from "./components/Edit";
+import Person2Icon from "@mui/icons-material/Person2";
+import { Button, Typography } from "@mui/material";
 
 function App() {
 	return (
-		<>
-			<div>
-				<MediaItem name='Media 1' />
-				<MediaItem name='Media 2' />
-			</div>
-			<div
-				style={{
-					backgroundColor: "#3d3e3d",
-					display: "flex",
-					flexDirection: "column",
-					justifyContent: "space-between",
-				}}
-			>
-				<div />
-				<Timeline />
-			</div>
-		</>
+		<div>
+			<header className='header'>
+				<Typography variant='h4' className='name'>
+					Editor
+				</Typography>
+				<Button startIcon={<Person2Icon />}>Sign In</Button>
+			</header>
+			<Routes>
+				<Route path='/' element={<LandingPage />} />
+				<Route path='/edit' element={<Edit />} />
+			</Routes>
+		</div>
 	);
 }
 
