@@ -1,0 +1,28 @@
+{
+    "media": [
+        {
+            "name": "Videos",
+            "content": [
+                "http://s3"
+            ]
+        }
+    ],
+    "layers": [
+        [
+            {
+                "media": 1,
+                "media_start_time": 10,
+                "timeline_start": 100,
+                "timeline_end": 150
+            }
+        ],
+        [
+            {
+                "media": 1,
+                "media_start_time": 10,
+                "timeline_start": 100,
+                "timeline_end": 150
+            }
+        ]
+    ]
+}
